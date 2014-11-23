@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LocalStorage Background Colour Changer</title>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<style type="text/css">
+    
+    
+body {
+    background-image: url('bg.png'); 
+}
+
+.palette,#Picker {
+    margin: 5px;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #000;
+    text-align: center;
+    font-weight: 700;
+}
+
+#Picker {
+    background-color: #fff;font-weight:700
+}
+#colorPicker {
+    display: none;
+}
+.colorPicker1 {
+    background-color: #e1ffff
+}
+
+.colorPicker2 {
+    background-color: #ffffb8
+}
+
+.colorPicker3 {
+    background-color: #ffc5ff
+}
+
+.colorPicker4 {
+    background-color: #99ff9c
+}
+
+.colorPicker5 {
+    background-color: #97acff
+}
+</style>
+
+</head>
+<body>
+
+<h1>LocalStorage Background Colour Changer</h1>
+
+<div id="Picker" class="colorPicker1">T</div>
+<div id="colorPicker">
+<div id="colorPicker1" class="palette colorPicker1">C</div>
+<div id="colorPicker2" class="palette colorPicker2">C</div>
+<div id="colorPicker3" class="palette colorPicker3">C</div>
+<div id="colorPicker4" class="palette colorPicker4">C</div>
+</div>
+<div id="result"></div>
+
+<script type="text/javascript">
+/**
+* Check if localStorage is supported and alert user if it's not
+* Check if the key background has been set and has a value
+* if so store value in variable getColour and using jQuery add
+* class set in variable getColour to body
+*/
+if (typeof (localStorage) == 'undefined') {
+    document.getElementById("result").innerHTML = 
+'Your browser does not support HTML5 localStorage. Try upgrading.';
+} else {
+    if (localStorage.getItem("background") != null) {
+        getColour = localStorage.background;
+        $("body").addClass(getColour);
+    }
+}
+
+/**
+* Wait until DOM has loaded then get class set in localStorage
+* Bind click handler to .palette and slowly fade #result in (Used to reset the fadeOut)
+* Define variable getColour (Included already above but couldn't get it to work?) to value stored 
+* Remove class added to body and key from storage
+* define variable setColour with the value of the ID that was clicked on and add class to body
+* set class in Storage and show user its been set
+* Slowly fade out the message
+*/
+$(document).ready(function () {
+    $('.palette').click(function () {
+        getColour = localStorage.background;
+        $("#result").fadeIn('slow');
+        $("body").removeClass(getColour);
+        localStorage.removeItem('background');
+        var setColour = $(this).attr("id");
+        $("body").addClass(setColour);
+        localStorage.setItem("background", setColour);
+        $("#colorPicker").slideToggle("slow");
+        document.getElementById("result").innerHTML = 'class ' + setColour + ' saved in localStorage';
+        $("#result").fadeOut('slow');
+    });
+    $("#Picker").click(function () {
+        $("#colorPicker").slideToggle("slow");
+    });
+});
+</script>
+
+<noscript>Your browser does not support JavaScript or it has been disabled!  So you can't use this colour changer</noscript>
+
+</body>
+</html>

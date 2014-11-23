@@ -1,0 +1,403 @@
+body {
+    background-image: url("bg.png");
+    font-family:"Baskerville", serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    height: 100%;
+    margin: 0;
+  
+}
+
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+    }
+
+
+
+/*Custom Fonts*/
+@font-face {
+    font-family: "BebasNeue"; 
+    src: url("bebas_neue_regular.otf");
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("bebas_neue_bold.otf");
+    font-weight: bold;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("bebas_neue_thin.otf");
+    font-weight: 100;
+    font-style: normal; 
+
+
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("bebas_neue_light.otf");
+    font-weight: 200;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("bebas_neue_book.otf");
+    font-weight: 300;
+    font-style: normal; 
+
+
+}
+
+
+
+
+
+
+
+/* Default Links */
+
+a:link {
+    color: #CC6699;
+    text-decoration: none;
+    font-weight: normal; 
+    
+}
+a:visited {
+    color: #00A37A;
+    text-decoration: none;
+    font-weight: normal; 
+    }
+    
+a:hover {
+    color: #FF8585;
+    text-decoration: none;
+    font-weight: normal;
+    text-decoration: underline; 
+    }
+    
+a:active {
+    color: #FF0066;
+    text-decoration: none;
+    }
+
+.clear {
+    clear:both;
+}
+    
+    
+
+    
+ #main {
+    width: 100%;
+    overflow: auto; 
+    padding-bottom: 40px;
+   
+ }
+ 
+ #container	{
+    position: relative; 
+    width: 1000px; 
+    overflow: auto;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    height: auto;
+    background: rgba(172, 245, 198, 0.47);
+ 
+
+    
+    }
+ 
+
+ 
+ #content {
+    float: left;
+    width: 500px;
+    line-height: 20px;
+    padding: 0 0 0 121px;
+    margin: 15px 0;
+    font-size: 16px;
+    height: auto;
+ }
+ 
+ 
+
+
+ 
+ 
+
+
+
+h1 {
+    font-family: "BebasNeue", "Avant Garde", sans-serif; 
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    line-height: 18px;
+    color: #000000;
+    text-align: left;
+    background-color: transparent;
+    padding: 0 0 0 0;
+    margin: 80px 0 30px 0;
+    
+}
+
+h2 {
+    font-family: "Baskerville", "Book Antiqua", serif;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 0;
+    padding: 0; 
+}
+
+h3 {
+    font-family: "BebasNeue", "Avant Garde", sans-serif; 
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal; 
+    letter-spacing: 0;
+    line-height: 12px;
+    color: #444444;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    background-color: transparent;
+    padding: 0 0 0 0;
+    margin: 0 0 6px 0;
+}
+
+
+
+/*navigation*/
+
+#nav {
+    background-color: #CC6699;
+    width: 100%;
+    height: 40px;
+    font-family: "BebasNeue", sans-serif; 
+    font-size: 20px;
+    line-height: 10px;
+    letter-spacing: 3px; 
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center; 
+
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center; 
+
+}
+
+#nav ul li {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 0;
+    text-align: center; 
+
+
+}
+
+#nav ul li a{
+    display: block;
+    padding: 15px;
+    text-align: center; 
+
+}
+
+#nav a {
+    color: #FFFFFF;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+#nav a:hover {
+    color: #CCFFCC;
+    font-weight: normal;
+    text-decoration: underline; 
+
+}
+
+#nav .here {
+    color: #CCFFCC;
+    font-weight: normal;
+}
+
+
+#logo {
+    float: right;
+    width: 223px;
+    height: 226px;
+    padding: 0 0 0 0;
+    margin: 12px 120px 0 0;
+}
+
+
+/*Right Sidebar*/
+
+#sidebar {
+    float: right;
+    width: 20%;
+    font-size: 12.5px;
+    line-height: 15px;
+    background-color: transparent;
+    padding: 0 0 0 0;
+    margin: 70px 100px 40px 0;    
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+}
+
+#sidebar li {
+    text-decoration: underline;
+    padding: 1px; 
+}
+
+.widget {
+    display: block; 
+    text-align: left;
+    padding: 0 0 24px 0;
+    margin: 40px 0 0 0; 
+    
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.widget ul li{
+    list-style: none;
+    border-bottom: 1px solid #dadada;
+    padding: 0 0 4px 0;
+    margin: 0 0 4px 0;
+}
+
+.more a {
+    display: block;
+    text-align: left; 
+    color: #CC6699;
+    text-transform: uppercase;
+    width: 280px;
+    font-size: 12.5px;
+    padding: 0 0 0 0px;
+    margin: 27px 0 0 0;
+    
+    
+}
+.more a:hover {
+    color: #FF8585;
+}
+
+.social {
+    
+}
+
+.social img{
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+.social img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+.palette, #slider {
+    font-family: "BebasNeue", "Avant Garde", sans-serif;
+    margin: 2px;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+    border: 1px dotted #ffffff;
+    text-align: center;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 4px 0 0 0; 
+}
+
+#slider {
+    background-color: #f5afd3;
+    color: #ffffff;
+}
+
+#colorPicker {
+    display: none;
+}
+.bg1 {
+    background-color: #fff;
+    background-image: none; 
+
+}
+
+.bg2 {
+    background-image: url("tree_bark.png"); 
+
+
+}
+
+.bg3 {
+    background-image: url("foggy_birds.png"); 
+
+
+}
+
+
+.bg4 {
+    background-image: url("bg.png"); 
+
+}
+
+
+
+
+
+/*footer*/
+
+#footer-full {
+    margin-top: -40px; 
+    position: relative;
+    background-color: #CC6699;
+    width: 100%;
+    color: #FFFFFF;
+    height: auto;
+    height: 40px;
+    text-align: center;
+    clear: both; 
+    
+    
+}
+
+    
+    .footer-copy span {
+    font-size: 11px;
+    }
+    
+    .footer-copy a {
+    color:#D1F4D1;
+    }
+}

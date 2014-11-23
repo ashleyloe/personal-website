@@ -1,0 +1,183 @@
+
+
+
+<!doctype html>
+
+<html lang="en">
+    
+    
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ashley Loe | About Me</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="main">
+
+
+    
+    <div id="nav">
+    <ul>
+    <li><a href = "index.html">Home</a></li>
+    <li><a href="about.html"><div class="here">About Me</div></a></li>
+    <li><a href="writing.html">Writing Portfolio</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href ="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    </div>
+        
+    
+    
+    
+    
+    <div id="container">
+
+    
+
+
+
+    
+<div id ="content">
+        <h1>Hi!</h1>
+            <img src="me.jpg" border="0" alt="Ashley" width="150" height="150" style="float:left; margin: 0 6px 6px 0;" />
+            
+<p>Hi, I'm Ashley Loe and I'm a sophomore at Smith College studying computer science. I'm from the sunny state of California and couldn't imagine living anywhere else!
+
+</p>
+
+<p>I'm interested in a wide variety of things, including books and writing! I read all sorts of literature--the news, nonfiction, fiction, magazines, etc.
+I'm currently really interested in articles about the changing tech culture of Silicon Valley, as well as the gender gap in tech. I'm also really loving post-apocalyptic and
+dystopic young adult novels. I read a lot, and quite quickly as well. I'm a speed reader and can read about 1000 words per minute. Check out my <a href="http://www.goodreads.com">Goodreads profile</a> for more infomration
+about what books I'm reading!
+</p>
+
+<p> My dream job would be to one day work with my two loves: books and computer science! I'm hoping that technology will make literature more accessible
+and less expensive for the general public. I believe that the power of imagination and knowledge harnessed through books is important to pass on to future generations.</p>
+
+</div>
+
+
+
+<div id = "sidebar">
+<center><div id="slider" class="bg1">click<img src="pointer.png" border="0" width="15" height="17" style="float: right;" />
+       
+</div>
+<div id="colorPicker">
+<div id="bg1" class="palette bg1"></div>
+<div id="bg2" class="palette bg2"></div>
+<div id="bg3" class="palette bg3"></div>
+<div id="bg4" class="palette bg4"></div>
+</div></center>
+
+        
+    <div class="widget"><div class="social"><center>
+        <a href="http://www.goodreads.com" target="_blank"><img src="goodreads.png" border="0" alt="" /></a>
+	<a href="http://www.facebook.com/ashleymloe" target="_blank"><img src="facebook.png" border="0" alt="" /></a> 
+	<a href="http://www.linkedin.com/in/ashleyloe" target="_blank"><img src="linkedin.png" border="0" alt="" /></a>
+ 	<a href="http://feeds.feedburner.com/AshleyLoe"><img src="rss.png" border="0" alt="" /></a> 
+    </center></div>
+    
+    
+    <div class="widget"><h3>About Me</h3>
+    <img src="me.jpg" border="0" alt="Ashley" width="90" height="90" style="float:left; margin: 0 6px 6px 0;" />
+    CS student and bookworm extraordinaire.<br>
+    </div>
+    
+    <div class="more"><a href="about.html">More About Ashley</a>
+    </div>
+
+    <div class="widget"><h3>What I'm Reading<br></h3>
+        <img src= "champion.jpg" border = "0" alt= "Champion" width= "76.7" height="111.7"; style = "float: left; margin: 0 6px 6px 0;"/>
+        <i>Champion</i><br>
+        by Marie Lu<br>
+        I'm very excited to read the last book of the <i>Legend</i> trilogy!<br>  
+    </div>
+    
+     <div class = "widget"><h3>Latest Blog Posts</h3>
+    <a href = "books.html"><i>Dark Triumph</i> by Robin LaFevers</a>
+        
+    </div>
+    
+    <div class = "widget"><h3>Article of the Week</h3>
+    <a href= "http://www.nytimes.com/2014/03/16/magazine/silicon-valleys-youth-problem.html"> Silicon Valley's Youth Problem</a>
+    A closer examination of the influx of young people in tech...and how it seems like they mostly just want to make cool apps, and ignore the old technology that's been keeping us going all these years.
+    </div>
+
+
+
+
+    
+
+</div>
+    
+    
+    </div>
+
+    
+    
+</div>
+</div>
+    
+    
+<div id = "footer-full">
+    <div class = "footer-copy">
+        <span>Copyright 2014 Ashley Loe. All Rights Reserved. <a href = "MAILTO:aloe@smith.edu">Contact.</a></span>
+    </div>
+</div>
+    </div>
+
+	
+        
+        
+</body>
+
+
+
+
+
+<script type="text/javascript">
+/**
+* Check if localStorage is supported and alert user if it's not
+* Check if the key background has been set and has a value
+* if so store value in variable getColour and using jQuery add
+* class set in variable getColour to body
+*/
+if (typeof (localStorage) == 'undefined') {
+    document.getElementById("result").innerHTML = 
+'Your browser does not support HTML5 localStorage. Try upgrading.';
+} else {
+    if (localStorage.getItem("background") != null) {
+       getColour = localStorage.background = document.body.style.background;
+        $("body").addClass(getColour);
+    }
+}
+
+/**
+* Wait until DOM has loaded then get class set in localStorage
+* Bind click handler to .palette and slowly fade #result in (Used to reset the fadeOut)
+* Define variable getColour  to value stored 
+* Remove class added to body and key from storage
+* define variable setColour with the value of the ID that was clicked on and add class to body
+* set class in Storage and show user its been set
+* Slowly fade out the message
+*/
+$(document).ready(function () {
+    $('.palette').click(function () {
+        getColour = sessionStorage.background;
+        $("body").removeClass(getColour);
+        sessionStorage.removeItem('background');
+        var setColour = $(this).attr("id");
+        $("body").addClass(setColour);
+       sessionStorage.setItem("background", setColour);
+        $("#colorPicker").slideToggle("slow");
+    });
+    $("#slider").click(function () {
+        $("#colorPicker").slideToggle("slow");
+    });
+});
+</script>

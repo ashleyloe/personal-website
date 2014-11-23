@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+    
+    
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ashley Loe | Contact Me</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+
+
+<div id= "header"></div>
+<h1> Contact Me</h1>
+
+
+
+<li><a href = "contactme.html"></a></li>
+
+<div id = "main"></div>
+
+<p>Please contact me using the form given below, through social media (links are in the sidebar to the right), or by <a href="MAILTO:aloe@smith.edu"> email.</a></p>
+
+<form name="contactForm" onsubmit = "return validateForm();" method = "post">	
+	 <fieldset>		
+	 <legend>Contact Me!</legend>	
+	 	 Name: <input required type="text" name="name"><br>
+                 Phone: (<input required type="text" name="areaCode" size="3" maxlength="3">) -
+                        <input required type=Òtext" name="phonePrefix" size="3" maxlength="3">	
+                        <input required type=Òtext" name="phoneSuffix" size="4" maxlength=Ò4"><br>	
+                Email: <input required type = "text" name = "email"><br>
+                        Reason for Contact:<br>
+                        <input type="checkbox" name="books" value="Books"> I want to talk to you about books<br>
+                        <input type="checkbox" name="cs" value="CS"> I want to talk to you about CS! <br>
+                        Note: <textarea required name ="note" rows ="10" cols = "50"></textarea>
+                        
+	 	 <input type="submit" value="Submit" class="button">
+	 </fieldset>
+         
+</form>
+
+
+
+
+
+
+<script>
+function validateForm() {
+    var x = document.forms["contactForm"]["email"].value;
+    var checkAt = x.indexOf("@");
+    var checkDot = x.lastIndexOf(".");
+    if (checkAt < 1 || checkDot < checkAt + 2 || checkDot+2 > x.length ) {
+        alert("Please enter a valid e-mail address");
+        return false;
+    } else{
+    return true; 
+ }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div id = "footer-full"> <div class = "footer-copy"><span>Copyright 2014 Ashley Loe. All Rights Reserved. <a href = "MAILTO:aloe@smith.edu">Contact.</a></span></div></div>
+</body>
+</html>
